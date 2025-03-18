@@ -141,4 +141,33 @@ window.onload = function () {
         }
     })
     .to('.logoWrap', {top: '20%', ease: 'none', duration: 5}, 0)
+
+    //09. loading
+
+    let loading = document.querySelector('.loading')
+    let rotate = document.querySelectorAll('.rotate')
+    let opa = document.querySelectorAll('.opacity')
+
+    setTimeout(()=> {
+        loading.classList.add('scene1');
+    },0),
+    setTimeout(()=> {
+        loading.classList.add('scene2');
+    },1500),
+    setTimeout(()=> {
+        loading.classList.remove('scene1' ,'scene2');
+    },2500),
+    setTimeout(()=>{
+        rotate.forEach(rotate => {
+            rotate.classList.add('on')
+        });
+    },2500),
+    setTimeout(()=>{
+        opa.forEach(opa => {
+            opa.classList.add('on')
+        });
+    },2500)
+
+
+
 }
