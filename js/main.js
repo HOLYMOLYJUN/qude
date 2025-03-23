@@ -8,6 +8,27 @@ window.onload = function () {
         menuBox.classList.toggle('on');
     })
 
+    //반응형 헤더
+    let header = document.querySelector("header");
+    let mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+    function handleScroll () {
+        if (mediaQuery.matches) {
+            if (window.scrollY > 0) {
+                header.classList.add('show');
+            } else {
+                header.classList.remove("show");
+            }
+        } else {
+            header.classList.add('show');
+        }
+
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); 
+
+
 
     gsap .registerPlugin(ScrollTrigger); //gsap 라이브러리 스크롤 트리거 등록
 
@@ -28,6 +49,10 @@ window.onload = function () {
     .to('.logoWrap #j', {x: 70, y:100, rotate: -10, ease: 'none', duration: 5}, 0)
     .to('.logoWrap #u', {x: 80, y:200, rotate: 10, ease: 'none', duration: 5}, 0)
     .to('.logoWrap #n', {x: 10, y:450, rotate: 20, ease: 'none', duration: 5}, 0)
+
+
+
+    
 
     //02. 공통적 .mainText .title i
     gsap.utils.toArray('.mainTextBox .title i').forEach((selector) => {
@@ -144,30 +169,33 @@ window.onload = function () {
 
     //09. loading
 
-    let loading = document.querySelector('.loading')
-    let rotate = document.querySelectorAll('.rotate')
-    let opa = document.querySelectorAll('.opacity')
+    let loading = document.querySelector('.loading');
+    let rotate = document.querySelectorAll('.rotate');
+    let opa = document.querySelectorAll('.opacity');
 
-    setTimeout(()=> {
+    setTimeout(() => {
         loading.classList.add('scene1');
-    },0),
-    setTimeout(()=> {
-        loading.classList.add('scene2');
-    },1500),
-    setTimeout(()=> {
-        loading.classList.remove('scene1' ,'scene2');
-    },2500),
-    setTimeout(()=>{
-        rotate.forEach(rotate => {
-            rotate.classList.add('on')
-        });
-    },2500),
-    setTimeout(()=>{
-        opa.forEach(opa => {
-            opa.classList.add('on')
-        });
-    },2500)
+    }, 100); // 살짝 여유를 줘서 자연스럽게
 
+    setTimeout(() => {
+        loading.classList.add('scene2');
+    }, 1600);
+
+    setTimeout(() => {
+        loading.style.display = 'none'; // display 속성으로 완전히 숨기기
+    }, 2600);
+
+    setTimeout(() => {
+        rotate.forEach(rotate => {
+            rotate.classList.add('on');
+        });
+    }, 2600);
+
+    setTimeout(() => {
+        opa.forEach(opa => {
+            opa.classList.add('on');
+        });
+    }, 2600);
 
 
 }

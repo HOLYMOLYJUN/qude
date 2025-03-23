@@ -293,7 +293,6 @@ section {
 }
 .con2 .mainTextBox .in .box video {
     width: 100%;
-
 }
 
 .con2 .mainTextBox .title {
@@ -423,7 +422,6 @@ section {
 .con4 .mainTextBox .in {
     display: flex;
     justify-content: flex-end;
-
 }
 
 .con4 .mainTextBox .in .box {
@@ -487,7 +485,6 @@ section {
 .con4 .subTextBox {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
 
 .con4 .subTextBox .subText {
@@ -666,7 +663,7 @@ footer .logoWrap span img {
     height: 100vh;
     background-color: #141212;
     z-index: 99999;
-    display: none;
+    display: block;
 }
 .loading .logo {
     width: 250px;
@@ -725,10 +722,10 @@ footer .logoWrap span img {
 
 @keyframes up {
     0% {
-        transform: translateY(30px);
+        transform: translateY(50px);
     }
     30% {
-        transform: translateY(30px);
+        transform: translateY(50px);
     }
     100% {
         transform: translateY(0);
@@ -761,3 +758,204 @@ footer .logoWrap span img {
     }
 }
 
+
+@media (max-width: 1023px) {
+
+    .btn {
+        font-size: 10px;
+    }
+
+
+    header {
+        opacity: 0;
+        transition: opacity .3s;
+        width: 100%;
+        height: 100vh;
+    }
+    header.show {
+        opacity: 1;
+    }
+    header .inner {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+    }
+    header .inner .logo {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    header .gnb .menuOpen {
+        top: auto;
+        bottom: 0px;
+    }
+    
+    header .gnb .menuOpen::before {
+        width: 105px;
+        height: 3px;
+        top: 20px;
+    }
+    
+    header .gnb .menuOpen:hover::before {
+        width: 105px;
+    }
+    
+    header .gnb .menuBox  {
+        top: auto;
+        bottom: -1000px;
+    }
+    
+    header .gnb .menuBox.on {
+        top: auto;
+        bottom: 10px;
+        padding: 30px 0 50px;
+    }
+    header .gnb .menuBox li a {
+        font-size: 26px;
+    }
+    .visual .inner {
+        display: grid;
+        height: auto;
+        padding: 25px 50px 25px;
+        box-sizing: border-box;
+        grid-template-rows: auto auto;
+    }
+    
+    .visual .inner .mainText {
+        font-size: 60px;
+        margin-left: 0;
+        margin-bottom: 100px;
+    }
+
+    .visual .inner .mainText span i {
+        word-wrap: break-word;
+        word-break: break-word;
+        width: 300px;
+    }
+    .visual .inner .subText {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .visual .inner .subText br {
+        display: none;
+    }
+
+
+    .con1 .box .mainText {
+        font-size: 22px;
+    }
+
+    .con1 .box .subText {
+        font-size: 16px;
+    }
+    
+    .con1 .textAni {
+        margin-top: 30px;
+    }
+
+    .con1 .textAni ul li {
+        font-size: 32px;
+    }
+
+    .con1 .textAni::before  {
+       width: 50px;
+       height: 50px;
+    }
+
+    .con2 .mainTextBox .in .box {
+        max-width: 300px;
+        margin-right: 20px;
+    }
+    .con2 .mainTextBox .title.b {
+        margin-right: 100px;
+    }
+
+    .con2 .mainTextBox .title {
+        font-size: 70px;
+    }
+    .con2 .subTextBox .subText {
+        max-width: 600px;
+        font-size: 16px;
+    }
+    .con3 .textBox {
+        display: none;
+    }
+    
+    .con3 .listBox {
+        width: 100%;
+    }
+    .con3 .listBox li {
+        width: 49%;
+    }
+    .con4 .mainTextBox .title {
+        font-size: 75px;
+        line-height: 1;
+        letter-spacing: -5px;
+        overflow: hidden;
+    }
+    .con4 .mainTextBox .in .box {
+        max-width: 300px;
+        margin-right: 20px;
+    }
+
+    .con4 .listBox .box {
+        padding: 25px;
+        grid-template-columns: 1fr 1fr
+    }
+    
+    .con4 .listBox .box h2 {
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    .con4 .listBox .box h3 {
+        align-self: flex-start;
+        font-size: 30px;
+        grid-column: 3;
+    }
+    .con4 .listBox .box .text {
+        grid-column: span 2;
+    }
+
+    section.con4 {
+        margin-bottom: 50px;
+    }
+
+    .con4 .subTextBox .subText {
+        grid-column-start: 2;
+        max-width: 600px;
+        font-size: 18px;
+        margin-bottom: 100px;
+    }
+
+    .con5 .mainTextBox h2 {
+        font-size: 50px;
+    }
+    .con5 .listBox {
+        margin-top: 100px;
+    }
+    .con5 .listBox li h3  {
+        font-size: 30px;
+    }
+    .con5 .listBox li {
+        grid-template-columns: 2fr  auto;
+    }
+    .con5 .listBox li p:last-child {
+        display: none;
+    }
+    footer .inner {
+        height: 100vh;
+        padding: 100px 50px 100px;
+    }
+    footer .inner .box  {
+        padding: 50px 70px;
+    }
+    
+    footer .inner .box .mainTextBox h2  {
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+
+}
