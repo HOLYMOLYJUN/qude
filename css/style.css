@@ -959,3 +959,158 @@ footer .logoWrap span img {
 
 
 }
+
+
+@media (max-width: 767px) {
+    .inner {
+        padding: 0 0px;
+        box-sizing: border-box;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .visual .inner {
+        padding: 20px 0px;
+    }
+     
+    .visual .inner .mainText {
+        font-size: 40px;
+        margin-bottom: 100px;
+    }
+    .visual .inner .subText {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .con1 .box {
+        display: block;
+        padding: 30px 20px 50px;
+    }
+    .con1 .box .subText p  {
+        margin-top: 20px;
+    }
+
+    .con1 .textAni::before {
+        display: none;
+    }
+
+    .con1 .textAni .btn {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .con2 .inner {
+        padding: 0;
+    }
+    .con2 .mainTextBox span {
+        position: relative;
+        top: 0;
+        padding: 30px 0;
+        display: block;
+    }
+
+    .con2 .mainTextBox .in {
+        display: block;
+    }
+    .con2 .mainTextBox .in .box {
+        max-width: 100%;
+    }
+    
+    .con2 .mainTextBox .title  {
+        text-align: left;
+        font-size: 44px;
+    }
+    .con2 .mainTextBox .title.b {
+        text-align: center;
+    }
+    .con2 .mainTextBox .title.c {
+       text-align: right;
+    }
+
+    .con2 .subTextBox {
+        display: block;
+        margin-top: 40px;
+    }
+    
+    .con2 .subTextBox .iconBox  {
+        margin-top: 40px;
+    }
+
+    .con2 .subTextBox .iconBox li {
+        width: 20px;
+    }
+    .con4 .mainTextBox {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .con4 .mainTextBox .title {
+        font-size: 44px;
+    }
+    .con4 .mainTextBox .title.a {
+        text-align: center;
+        order: 2;
+    }
+    .con4 .mainTextBox .title.b {
+        text-align: right;
+        order: 3;
+    }
+    .con4 .mainTextBox .title.c {
+        text-align: left;
+    }
+
+    .con4 .mainTextBox .in {
+        order: 1;
+        display: block;
+    }
+    
+    .con4 .mainTextBox .in .box {
+        max-width: 100%;
+    }
+
+    
+    .con4 .subTextBox {
+        display: block;
+    }
+
+    .con4 .subTextBox .subText {
+        font-size: 18px;
+    }
+
+    .con5 .inner {
+        padding: 30px 0;
+        box-sizing: border-box;
+    }
+    .con5 .mainTextBox h2  {
+        font-size: 30px;
+    }.con5 .listBox {
+        border-top: 1px solid #000;
+        margin-top: 50px;
+    }
+    .con5 .listBox li h3  {
+        font-size: 24px;
+    }
+    .con5 .listBox li p {
+        font-size: 14px;
+    }
+    footer .inner {
+        padding: 30px 0 50px;
+        height: auto;
+    }
+    footer .inner .box {
+        padding: 30px 0;
+    }
+    footer .inner .box .mainTextBox h2 {
+        font-size: 40px;
+    }
+    footer .inner .box .mainTextBox p {
+        margin-bottom: 50px;
+        font-size: 14px;
+    }
+    footer .inner .box .talkBtn {
+        margin-bottom: 50px;
+    }
+
+}
